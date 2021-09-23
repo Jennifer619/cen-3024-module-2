@@ -5,7 +5,7 @@ import java.util.*;
 public class TextAnalyzer {
 	public static void main(String[] args) throws FileNotFoundException {
 		/** Reading file line by line */
-		File file = new File("C:\\Users\\jenni\\OneDrive - Valencia College\\Documents\\School\\~Valencia\\Fall 2021\\CEN 3024\\TheRaven.txt");
+		File file = new File("src\\TheRaven.txt");
 		Scanner scan = new Scanner(file);
 		/**
 		 * map to store key value pair
@@ -13,9 +13,9 @@ public class TextAnalyzer {
 		 * value: frequency of the word
 		 */
 		Map<String,Integer> map = new HashMap<String, Integer>(); 
-		while (scan.hasNextLine()) {
+		while (scan.hasNext()) {
 			// reading line by line
-			String val = scan.nextLine(); 
+			String val = scan.next(); 
 			// if the string is not inserted in the map yet then insert by setting the frequency as 1
 			if (map.containsKey(val) == false) 
 				map.put(val,1);
